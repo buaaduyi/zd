@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+        body{text-align:center}
+    </style>
+  </head>
+  <body>
+    {{ range . }}
+      <br>
+      <a href="{{ .HostAddress }}/static/{{ .FileName }}" download>{{ .FileName }}</a>
+    {{ end }}
+  </body>
+</html>
